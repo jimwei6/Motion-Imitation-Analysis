@@ -13,6 +13,9 @@ bash "./convert_amass_bvh.sh" "../amass_ds/TotalCapture/" "./amass_ds/TotalCaptu
 bash "./convert_amass_bvh.sh" "../amass_ds/Transitions/" "./amass_ds/Transitions"
 bash "./convert_amass_bvh.sh" "../amass_ds/DanceDB/" "./amass_ds/DanceDB"
 
+python ./scripts/resample_bvh.py './amass_ds/KIT' './amass_ds/KIT_resampled' 120
+python ./scripts/resample_bvh.py './amass_ds/TotalCapture' './amass_ds/TotalCapture_resampled' 120
+
 bash './MoConVQ/Script/tracking_directory.sh' './amass_ds/accad/' 'accad' './experiments'
 bash './MoConVQ/Script/tracking_directory.sh' './amass_ds/BMLmovi/' 'BMLmovi' './experiments'
 bash './MoConVQ/Script/tracking_directory.sh' './amass_ds/BMLrub/' 'BMLrub' './experiments'
@@ -43,9 +46,6 @@ python './Script/recenter_bvh.py' './experiments/TotalCapture'
 python './Script/recenter_bvh.py' './experiments/Transitions'
 python './Script/recenter_bvh.py' './experiments/DanceDB'
 
-python ./scripts/resample_bvh.py './experiments/KIT' './experiments/KIT_resampled' 120
-python ./scripts/resample_bvh.py './experiments/TotalCapture' './experiments/TotalCapture_resampled' 120
-
 python './Script/evaluate.py' './amass_ds/accad' './experiments/accad' './accad.json' './accad.csv'
 python './Script/evaluate.py' './amass_ds/DanceDB' './experiments/DanceDB' './DanceDB.json' './DanceDB.csv'
 python './Script/evaluate.py' './amass_ds/BMLmovi' './experiments/BMLmovi' './BMLmovi.json' './BMLmovi.csv'
@@ -53,10 +53,10 @@ python './Script/evaluate.py' './amass_ds/Eyes' './experiments/Eyes' './Eyes.jso
 python './Script/evaluate.py' './amass_ds/BMLrub' './experiments/BMLrub' './BMLrub.json' './BMLrub.csv'
 python './Script/evaluate.py' './amass_ds/CMU' './experiments/CMU' './CMU.json' './CMU.csv'
 python './Script/evaluate.py' './amass_ds/EKUT' './experiments/EKUT' './EKUT.json' './EKUT.csv'
-python './Script/evaluate.py' './amass_ds/KIT' './experiments/KIT_resampled' './KIT.json' './KIT.csv'
+python './Script/evaluate.py' './amass_ds/KIT_resampled' './experiments/KIT' './KIT.json' './KIT.csv'
 python './Script/evaluate.py' './amass_ds/MPI_HDM05' './experiments/MPI_HDM05' './MPI_HDM05.json' './MPI_HDM05.csv'
 python './Script/evaluate.py' './amass_ds/MPI_Limits' './experiments/MPI_Limits' './MPI_Limits.json' './MPI_Limits.csv'
 python './Script/evaluate.py' './amass_ds/MPI_mosh' './experiments/MPI_mosh' './MPI_mosh.json' './MPI_mosh.csv'
 python './Script/evaluate.py' './amass_ds/SFU' './experiments/SFU' './SFU.json' './SFU.csv'
-python './Script/evaluate.py' './amass_ds/TotalCapture' './experiments/TotalCapture_resampled' './TotalCapture.json' './TotalCapture.csv'
+python './Script/evaluate.py' './amass_ds/TotalCapture_resampled' './experiments/TotalCapture' './TotalCapture.json' './TotalCapture.csv'
 python './Script/evaluate.py' './amass_ds/Transitions' './experiments/Transitions' './Transitions.json' './Transitions.csv'
