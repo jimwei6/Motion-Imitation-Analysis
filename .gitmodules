@@ -3,4 +3,4 @@
 	url = git@github.com:KosukeFukazawa/CharacterAnimationTools.git
 [submodule "MoConVQ"]
 	path = MoConVQ
-	url = git@github.com:heyuanYao-pku/MoConVQ.git
+	url = git@github.com:jimwei6/MoConVQ.git
