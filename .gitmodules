@@ -1,0 +1,6 @@
+[submodule "CharacterAnimationTools"]
+	path = CharacterAnimationTools
+	url = git@github.com:KosukeFukazawa/CharacterAnimationTools.git
+[submodule "MoConVQ"]
+	path = MoConVQ
+	url = git@github.com:heyuanYao-pku/MoConVQ.git
