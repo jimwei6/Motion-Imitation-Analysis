@@ -43,6 +43,9 @@ python './Script/recenter_bvh.py' './experiments/TotalCapture'
 python './Script/recenter_bvh.py' './experiments/Transitions'
 python './Script/recenter_bvh.py' './experiments/DanceDB'
 
+python ./scripts/resample_bvh.py './experiments/KIT' './experiments/KIT_resampled' 120
+python ./scripts/resample_bvh.py './experiments/TotalCapture' './experiments/TotalCapture_resampled' 120
+
 python './Script/evaluate.py' './amass_ds/accad' './experiments/accad' './accad.json' './accad.csv'
 python './Script/evaluate.py' './amass_ds/DanceDB' './experiments/DanceDB' './DanceDB.json' './DanceDB.csv'
 python './Script/evaluate.py' './amass_ds/BMLmovi' './experiments/BMLmovi' './BMLmovi.json' './BMLmovi.csv'
@@ -50,10 +53,10 @@ python './Script/evaluate.py' './amass_ds/Eyes' './experiments/Eyes' './Eyes.jso
 python './Script/evaluate.py' './amass_ds/BMLrub' './experiments/BMLrub' './BMLrub.json' './BMLrub.csv'
 python './Script/evaluate.py' './amass_ds/CMU' './experiments/CMU' './CMU.json' './CMU.csv'
 python './Script/evaluate.py' './amass_ds/EKUT' './experiments/EKUT' './EKUT.json' './EKUT.csv'
-python './Script/evaluate.py' './amass_ds/KIT' './experiments/KIT' './KIT.json' './KIT.csv'
+python './Script/evaluate.py' './amass_ds/KIT' './experiments/KIT_resampled' './KIT.json' './KIT.csv'
 python './Script/evaluate.py' './amass_ds/MPI_HDM05' './experiments/MPI_HDM05' './MPI_HDM05.json' './MPI_HDM05.csv'
 python './Script/evaluate.py' './amass_ds/MPI_Limits' './experiments/MPI_Limits' './MPI_Limits.json' './MPI_Limits.csv'
 python './Script/evaluate.py' './amass_ds/MPI_mosh' './experiments/MPI_mosh' './MPI_mosh.json' './MPI_mosh.csv'
 python './Script/evaluate.py' './amass_ds/SFU' './experiments/SFU' './SFU.json' './SFU.csv'
-python './Script/evaluate.py' './amass_ds/TotalCapture' './experiments/TotalCapture' './TotalCapture.json' './TotalCapture.csv'
+python './Script/evaluate.py' './amass_ds/TotalCapture' './experiments/TotalCapture_resampled' './TotalCapture.json' './TotalCapture.csv'
 python './Script/evaluate.py' './amass_ds/Transitions' './experiments/Transitions' './Transitions.json' './Transitions.csv'

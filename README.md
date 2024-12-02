@@ -17,9 +17,8 @@ pip install bvhio
 Please download from the [AMASS](https://amass.is.tue.mpg.de/) webpage.
 
 Datasets used: ACCAD, BMLmovi, BMLRub, CMU, DanceDB, Eye-
-sJapanDataset, MPI HDM05,
-KIT, EKUT,
-SFU, Total Capture, Mosh, PosePrior, and Transitions.
+sJapanDataset, MPI HDM05, EKUT,
+SFU, Mosh, PosePrior, and Transitions.
 
 # Scripts
 
@@ -50,9 +49,14 @@ For folder based, please look at the MoConVQ submodule.
 bash ./scripts/tracking_directory.sh <input_dir> <custom experiment name> <output_dir>
 ```
 
+Resampling BVH to specified framerate (linear)
+```python
+python ./scripts/resample_bvh.py <truth_dir> <output_dir> <target fps>
+```
+
 Evaluating results
 ```python
-python ./scripts/evaluate.py <truth_dir> <pred_dir> <experiment name> <output_csv_file>
+python ./scripts/evaluate.py <truth_dir> <pred_dir> <experiment runtime json file> <output_csv_file>
 ```
 
 Pipeline for running the whole thing (assumes amass datasets are already converted to bvh in ./amass_ds using ./scripts/amass_to_bvh.py)
