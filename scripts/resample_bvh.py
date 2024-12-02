@@ -20,11 +20,12 @@ class BVH:
             self.header.append(line)
             if "Frame Time:" in line:
                 self.frame_time = float(line.split(":")[1].strip())
+                break
             if "Frames:" in line:
                 self.num_frames = int(line.split(":")[1].strip())
             if "MOTION" in line:
                 motion_start_idx = i + 3
-                break
+               
 
         if motion_start_idx is not None:
             motion_lines = lines[motion_start_idx:]
@@ -56,7 +57,6 @@ def resample_motion(data, original_frame_time, target_frame_time):
 def resample_bvh(input_file, output_file, target_fps):
     bvh = BVH(input_file)
     target_frame_time = 1.0 / target_fps
-
     resampled_data = resample_motion(bvh.motion_data, bvh.frame_time, target_frame_time)
     bvh.save_bvh(output_file, resampled_data, target_frame_time)
 
