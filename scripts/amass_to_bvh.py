@@ -1,7 +1,7 @@
 import argparse
 import os
-from anim import amass
-from anim import bvh
+from ./CharacterAnimationTools/anim import amass
+from ./CharacterAnimationTools/anim import bvh
 
 def process_directory(amass_dir, smplh_path, output_dir):
     # Ensure the output directory exists
