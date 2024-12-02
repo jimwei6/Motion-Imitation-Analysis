@@ -57,5 +57,5 @@ python ./scripts/evaluate.py <truth_dir> <pred_dir> <experiment name> <output_cs
 
 Pipeline for running the whole thing (assumes amass datasets are already converted to bvh in ./amass_ds using ./scripts/amass_to_bvh.py)
 ```bash
-bash ./experiment.sh
+bash ./scripts/experiment.sh
 ```
