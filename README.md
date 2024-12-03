@@ -49,7 +49,6 @@ For folder based, please look at the MoConVQ submodule.
 bash ./scripts/tracking_directory.sh <input_dir> <custom experiment name> <output_dir>
 ```
 
-Still in progress: has some bugs
 Resampling BVH to specified framerate (linear). 
 ```python
 python ./scripts/resample_bvh.py <truth_dir> <output_dir> <target fps>
