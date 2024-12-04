@@ -176,7 +176,9 @@ def evaluate_directories(truth_dir, test_dir, time_file, output_csv):
           'success': success,
           'frame_imit_starts': starting_frame,
           **mean_position_error,
-          **mean_rotation_error})
+          **mean_rotation_error,
+          **mean_position_change_error,
+          **mean_rotation_change_error})
 
     # Create a DataFrame and save as CSV
     df = pd.DataFrame(results)
